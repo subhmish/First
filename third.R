@@ -1,3 +1,1 @@
-mtcars
-
-mtcars$mpg
+mtcars[,2:3]
