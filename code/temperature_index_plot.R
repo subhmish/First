@@ -13,9 +13,13 @@ read_csv("data/GLB.Ts+dSST.csv", skip=1,na="***") %>%
     y="Temperature anomaly(C)",
     title = "GLOBAL LAND-OCEAN TEMPEATURE INDEX",
     subtitles = "Data Source: NASA's GISS"
-  )
+  ) +
   theme_light() +
-  theme(axis.ticks = element_blank())
+  theme(axis.ticks = element_blank(),
+        plot.title.position = "plot",
+        plot.title=element_text(margin = margin(b=15), color="red", face = "bold"),
+        plot.subtitle = element_text(size =8)
+        )
 
 ggsave("figures/tempearature_index_plot.png",width = 6, height = 4)
 
